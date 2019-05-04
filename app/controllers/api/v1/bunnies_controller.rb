@@ -17,7 +17,7 @@ class Api::V1::BunniesController < ApplicationController
 
   def update
     @bunny = Bunny.find(params[:id])
-    @bunny.update(note_params)
+    @bunny.update(bunny_params)
     if @bunny.save
       render json: @bunny, status: :accepted
     else
@@ -33,7 +33,7 @@ class Api::V1::BunniesController < ApplicationController
   private
 
   def bunny_params
-    params.require(:bunny).permit(:name, :isMale, :isLop, :imgUrl)
+    params.require(:bunny).permit(:name, :isMale, :isLop, :imgUrl, :isFav)
   end
 
 end

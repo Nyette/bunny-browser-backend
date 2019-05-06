@@ -10,19 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190502203724) do
+ActiveRecord::Schema.define(version: 20190506023249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bunnies", force: :cascade do |t|
     t.string "name"
-    t.boolean "isMale"
-    t.boolean "isLop"
-    t.string "imgUrl"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "isFav"
+    t.string "gender"
+    t.string "ear_type"
+    t.string "img_url"
+    t.boolean "is_fav"
   end
 
 end

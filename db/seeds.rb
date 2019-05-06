@@ -10,5 +10,5 @@
 Bunny.destroy_all
 
 # Bunnies
-bugs_bunny = Bunny.create!(name: "Bugs Bunny", isMale: true, isLop: false, imgUrl: "https://media.giphy.com/media/5zdwsWUJsC2gqnThQV/giphy.gif", isFav: false)
-lola_bunny = Bunny.create!(name: "Lola Bunny", isMale: false, isLop: false, imgUrl: "https://media.giphy.com/media/ncPoW8dIfYGHu/giphy.gif", isFav: false)
+bugs_bunny = Bunny.create!(name: "Bugs Bunny", gender: "M", ear_type: "Erect", img_url: "https://media.giphy.com/media/5zdwsWUJsC2gqnThQV/giphy.gif", is_fav: false)
+lola_bunny = Bunny.create!(name: "Lola Bunny", gender: "F", ear_type: "Lop", img_url: "https://media.giphy.com/media/ncPoW8dIfYGHu/giphy.gif", is_fav: false)

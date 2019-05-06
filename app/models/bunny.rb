@@ -1,7 +1,6 @@
 class Bunny < ApplicationRecord
-  validates :name, presence: true
-  validates :imgUrl, presence: true
-  validates :isMale, inclusion: { in: [ true, false ] }
-  validates :isLop, inclusion: { in: [ true, false ] }
-  validates :isFav, inclusion: { in: [ true, false ] }
+  validates :name, presence: true, length: { in: 3..10 }, uniqueness: true
+  validates :gender, presence: true
+  validates :ear_type, presence: true
+  validates :img_url, presence: true
 end

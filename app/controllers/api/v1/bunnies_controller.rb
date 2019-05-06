@@ -33,7 +33,7 @@ class Api::V1::BunniesController < ApplicationController
   private
 
   def bunny_params
-    params.require(:bunny).permit(:name, :isMale, :isLop, :imgUrl, :isFav)
+    params.require(:bunny).permit(:name, :gender, :ear_type, :img_url, :is_fav)
   end
 
 end
